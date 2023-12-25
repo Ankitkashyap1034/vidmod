@@ -1,0 +1,43 @@
+.footer {
+  /* position: fixed; */
+  /* bottom: 0; */
+  width: 100%;
+  padding: 0;
+}
+.QA_section{
+    padding: 12px;
+}
+#dataTable_wrapper{
+    overflow-x: scroll;
+    text-wrap: nowrap;
+}
+
+.container-fluid.page-body-wrapper {
+  padding: 0;
+}
+.sidebar {
+  margin: 0;
+  width: 247px;
+  border-top-right-radius: 0;
+}
+
+.fixed-top {
+  position: unset !important;
+}
+
+.main-panel .content-wrapper {
+  padding-top: 22px;
+}
+
+.main-panel table th, .main-panel table td, .main-panel table p {
+  font-size: 18px;
+}
+
+.card .card-body {
+  padding: 1rem 1.8rem;
+}
+@media (min-width: 992px) {
+  .sidebar-icon-only .sidebar {
+    width: 80px;
+  }
+}
