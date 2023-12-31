@@ -42,7 +42,7 @@
 									<div>
 										<label class="form-label">Email</label>
 										<div>
-											<input type="text" name="email" class="form-control" value="{{ Auth::user()->email }}" autofocus readonly>
+											<input type="text" name="email" class="form-control" value="{{ Auth::user()->email }}" autofocus />
 										</div>
 										<br>
 									</div>

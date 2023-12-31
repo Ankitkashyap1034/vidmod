@@ -21,22 +21,43 @@
         </div>
       </li>
 
+
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
           <i class="typcn typcn-document-text menu-icon"></i>
-          <span class="menu-title">Homepage</span>
+          <span class="menu-title">Layouts</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{route('admin.homepage.hero')}}">Header</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('admin.homepage.header')}}">Header</a></li>
           </ul>
-           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{route('admin.homepage.header')}}">Hero Section</a></li>
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{route('admin.homepage.footer')}}">Footer</a></li>
           </ul>
         </div>
         {{-- <div class="collapse" id="ui-basic">
-         
+
+        </div> --}}
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#hero-section" aria-expanded="false" aria-controls="hero-section">
+          <i class="typcn typcn-document-text menu-icon"></i>
+          <span class="menu-title">Homepage</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="hero-section">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{route('admin.language.select')}}">Hero Section</a></li>
+          </ul>
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{route('admin.homepage.about')}}">About Section</a></li>
+          </ul>
+        </div>
+        {{-- <div class="collapse" id="ui-basic">
+
         </div> --}}
       </li>
 
@@ -110,13 +131,12 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#form-elements-10" aria-expanded="false" aria-controls="form-elements">
           <i class="typcn typcn-film menu-icon"></i>
-          <span class="menu-title">Transaction</span>
+          <span class="menu-title">Language</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="form-elements-10">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="#">Add</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Listing</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('admin.language.home') }}">Listing</a></li>
           </ul>
         </div>
       </li>

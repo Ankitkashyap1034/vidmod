@@ -19,19 +19,19 @@
 						<div class="box_header ">
 							<div class="main-title">
 								<br><br>
-								<h3 class="mb-0">Header Setting</h3>
+								<h3 class="mb-0">About Section Setting</h3>
 							</div>
 						</div>
 						<br>
-						<form method="post" action="{{ route('admin.home.header.store') }}" enctype="multipart/form-data">
+						<form method="post" action="{{ route('admin.home.about.store') }}">
 							@csrf
 							<div class="row g-3">
-								<div class="col-lg-6 mb-4">
+								<div class="col-lg-3 mb-4">
 									<div>
-										<img class="img-fluid" width="220px" src="{{asset('/header/'.$headerData->logo)}}" alt="Logo Photo"><br>
-										<label class="form-label">Header Logo</label>
+										{{-- <img class="img-fluid" width="220px" src="{{asset('/header/'.$headerData->logo)}}" alt="Logo Photo"><br> --}}
+										<label class="form-label">Title</label>
 										<div>
-											<input type="file" name="logo_img" class="form-control" autofocus />
+											<input type="text" name="title" class="form-control" autofocus required value="{{ $data->title }}"/>
 										</div>
 									</div>
 								</div>
@@ -39,9 +39,9 @@
 							<div class="row g-3">
 								<div class="col-lg-6">
 									<div>
-										<label class="form-label">Languages</label>
+										<label class="form-label">Description</label>
 										<div>
-											<input type="text" name="language" class="form-control" autofocus />
+											<textarea rows="10" name="description" class="form-control" autofocus required value="{{ $data->description }}">{{ $data->description }}</textarea>
 										</div>
 										<br>
 									</div>

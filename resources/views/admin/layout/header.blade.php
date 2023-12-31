@@ -1,3 +1,4 @@
+
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row border-0">
   <div class="navbar-brand-wrapper d-flex justify-content-center" style="color:#212529; background:#212529;">
     <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
@@ -110,7 +111,7 @@
           <a class="dropdown-item preview-item">
             <div class="preview-thumbnail">
               <div class="preview-icon bg-info">
-                <i class="typcn typcn-user mx-0"></i> 
+                <i class="typcn typcn-user mx-0"></i>
               </div>
             </div>
             <div class="preview-item-content">

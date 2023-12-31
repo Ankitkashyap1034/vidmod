@@ -19,19 +19,19 @@
 						<div class="box_header ">
 							<div class="main-title">
 								<br><br>
-								<h3 class="mb-0">Header Setting</h3>
+								<h3 class="mb-0">Footer Setting</h3>
 							</div>
 						</div>
 						<br>
-						<form method="post" action="{{ route('admin.home.header.store') }}" enctype="multipart/form-data">
+						<form method="post" action="{{ route('admin.home.footer.store') }}" enctype="multipart/form-data">
 							@csrf
 							<div class="row g-3">
-								<div class="col-lg-6 mb-4">
+								<div class="col-lg-3 mb-4">
 									<div>
-										<img class="img-fluid" width="220px" src="{{asset('/header/'.$headerData->logo)}}" alt="Logo Photo"><br>
-										<label class="form-label">Header Logo</label>
+										{{-- <img class="img-fluid" width="220px" src="{{asset('/header/'.$headerData->logo)}}" alt="Logo Photo"><br> --}}
+										<label class="form-label">Footer Colour</label>
 										<div>
-											<input type="file" name="logo_img" class="form-control" autofocus />
+											<input type="color" name="footer_color" class="form-control" autofocus value="{{ $data->footer_color }}" required/>
 										</div>
 									</div>
 								</div>
@@ -39,9 +39,9 @@
 							<div class="row g-3">
 								<div class="col-lg-6">
 									<div>
-										<label class="form-label">Languages</label>
+										<label class="form-label">Contact Email</label>
 										<div>
-											<input type="text" name="language" class="form-control" autofocus />
+											<input type="email" name="contact_email" class="form-control" autofocus value="{{ $data->contact_email }}" required/>
 										</div>
 										<br>
 									</div>
