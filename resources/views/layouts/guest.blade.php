@@ -14,6 +14,12 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- <link href="resource/css/app.css" rel="stylesheet" > --}}
+    {{-- <link href="{{ asset('app-css/app.css') }}" rel="stylesheet"> --}}
+    {{-- <script src="'resource/js/app.js"></script>
+    <script src="resource/js/bootstrap.js"></script> --}}
+    {{-- <script src="{{ asset('resource/js/app-js/app.js') }}"></script>
+<script src="{{ asset('resource/js/app-js/bootstrap.js') }}"></script> --}}
 </head>
 
 <body class="font-sans text-gray-900 antialiased">

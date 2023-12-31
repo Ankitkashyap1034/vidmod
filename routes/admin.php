@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\LayoutController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\Pages\HomeController;
+use App\Http\Controllers\Admin\LanguageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +22,34 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+
+        Route::get('/language/select/', [LanguageController::class, 'selectLanguage'])->name('language.select');
         Route::post('/profile/update', [ProfileController::class, 'store'])->name('profile.update');
-        
-        Route::get('/homepage/header', [HomeController::class, 'index'])->name('homepage.header');
-        Route::get('/homepage/hero', [HomeController::class, 'index'])->name('homepage.hero');
+
+        Route::post('/homepage/hero', [HomeController::class, 'index'])->name('homepage.hero');
+        Route::post('/homepage/hero/store', [HomeController::class, 'store'])->name('home.hero.store');
+
+        // home header
+        Route::get('/header', [LayoutController::class, 'index'])->name('homepage.header');
+        Route::post('/header/store', [LayoutController::class, 'store'])->name('home.header.store');
+
+        //about section
+        Route::get('/about', [HomeController::class, 'indexAbout'])->name('homepage.about');
+        Route::post('/about/store', [HomeController::class, 'storeAbout'])->name('home.about.store');
+
+
+        // home footer
+        Route::get('/footer', [LayoutController::class, 'indexFooter'])->name('homepage.footer');
+        Route::post('/footer/store', [LayoutController::class, 'storeFooter'])->name('home.footer.store');
+
+
+
+        // language
+        Route::get('/language', [LanguageController::class, 'index'])->name('language.home');
+        Route::get('/language/edit-language/{lang}', [LanguageController::class, 'getInfo'])->name('language.get.info');
+        Route::get('/language/status/{lang}', [LanguageController::class, 'changeStatus'])->name('language.change.status');
+        Route::post('/language', [LanguageController::class, 'store'])->name('language.store');
+        Route::post('/language/edit-language/', [LanguageController::class, 'update'])->name('language.update');
     });
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 });
